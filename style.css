@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-bg-svg: #6D28D9;
+  --color-font-svg: #DDD6FE;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  min-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+#timer {
+  display: grid;
+  place-content: center;
+}
+
+.time {
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0 1.7rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 700ms;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.display-buttons {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+#cards {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cards {
+  margin: 3rem auto;
+  display: grid;
+  grid-template-areas: 'col1 col2';
+  gap: 3.2rem;
+}
+
+.forest svg,
+.rain svg,
+.coffee-shop svg,
+.fireplace svg {
+  width: 12rem;
+  height: 12rem;
+}
+
+.selected svg path:nth-child(1) {
+  fill: var(--color-bg-svg);
+}
+
+.selected svg path:nth-child(2) {
+  fill: var(--color-font-svg);
+}
+
+@media (min-width: 700px) {
+  main {
+    min-width: 70rem;
+    display: grid;
+    grid-template-areas: 'COL1 COL2';
+    margin: 10rem auto;
+  }
+
+  #timer {
+    margin-right: 10rem;
+  }
+
+  .time {
+    font-size: 12.6rem;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .display-buttons {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forest svg,
+  .rain svg,
+  .coffee-shop svg,
+  .fireplace svg {
+  width: 13.8rem;
+  height: 15.2rem;
+}
+}
+
+@media (min-width: 1000px) {
+  main {
+    width: 100vw;
+    margin: 15rem;
+  }
+
+  #timer {
+    margin-right: 19rem;
+  }
+}
